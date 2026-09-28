@@ -1,0 +1,422 @@
+/* =========================
+   FASHIONHOLIC - STYLE CSS
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    width: 100%;
+    height: 75px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #888;
+}
+
+.icons {
+    display: flex;
+    gap: 18px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 550px;
+    color: white;
+}
+
+.hero-content p:first-child {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    line-height: 1;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    border: none;
+    background: white;
+    color: #111;
+    padding: 15px 32px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #111;
+    color: white;
+}
+
+/* =========================
+   CATEGORIES
+   ========================= */
+
+.categories {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.categories h2,
+.products h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    overflow: hidden;
+}
+
+.category-image {
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+.women-bg {
+    background-image:
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80");
+}
+
+.men-bg {
+    background-image:
+        url("https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=900&q=80");
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.03);
+}
+
+.category-card h3 {
+    margin: 20px 0 15px;
+    font-size: 25px;
+}
+
+.category-card button {
+    padding: 11px 28px;
+    background: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* =========================
+   PRODUCTS
+   ========================= */
+
+.products {
+    padding: 80px 7%;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.small-heading {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    text-align: left;
+}
+
+.product-card {
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image {
+    height: 350px;
+    background-image:
+        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.product-card:nth-child(2) .product-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=700&q=80");
+}
+
+.product-card:nth-child(3) .product-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80");
+}
+
+.product-card:nth-child(4) .product-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=700&q=80");
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    padding: 7px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.product-info p {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.product-info strong {
+    font-size: 16px;
+}
+
+.add-cart {
+    width: calc(100% - 36px);
+    margin: 0 18px 18px;
+    padding: 12px;
+    background: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart:hover {
+    background: #555;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+footer h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #aaa;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .icons {
+        font-size: 19px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 50px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .categories,
+    .products {
+        padding: 55px 5%;
+    }
+
+    .categories h2,
+    .products h2 {
+        font-size: 29px;
+    }
+
+    .category-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-image {
+        height: 400px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+
+    .product-info {
+        padding: 13px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .add-cart {
+        width: calc(100% - 26px);
+        margin: 0 13px 13px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .category-image {
+        height: 350px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    .product-container {
+        gap: 10px;
+    }
+}
